@@ -4,7 +4,7 @@ A simple service for the Raspberry PI.
 
 # Usage:
 
-`ds18s20_prometheus` <port-number> <id=label>...
+`ds18s20_prometheus <port-number> <id=label>... `
 
 The label allows you to attach human readable names to your sensors.
 
