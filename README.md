@@ -18,4 +18,12 @@ To find out what sensors you have attached to your Raspberry PI, look for the fi
 
 The `28-xxxxxxxxxx` part of the path is the sensor ID. You can attach a label to it, by giving it as a parameter to the command line.
 
+# Preparing your raspberry pi
+
+Add the device tree overlay to your /boot/config.txt
+```
+dtoverlay=w1-gpio,gpiopin=4,pullup=on
+```
+replace the gpiopin=4 with the number of the gpiopin you use. I thin the pullup parameter adds an integrated pull-up.
+
 
