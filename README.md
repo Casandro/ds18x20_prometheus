@@ -1,6 +1,6 @@
 # ds18x20_prometheus
 
-A simple service for the Raspberry PI. Which exports temperature sensors exported by the Linux `w1_therm` drivers. Those include [DS18B20](https://www.maximintegrated.com/en/products/sensors/DS18B20.html), [DS18S20](https://www.maximintegrated.com/en/products/sensors/DS18S20.html), [DS1822](https://www.maximintegrated.com/en/products/sensors/DS1822.html) and [MAX31850](https://www.maximintegrated.com/en/products/sensors/MAX31850.html).
+A simple service for the Raspberry PI. Which exports temperature sensors exported by the Linux [`w1_therm`}(https://www.kernel.org/doc/html/latest/w1/w1-generic.html) drivers. Those include [DS18B20](https://www.maximintegrated.com/en/products/sensors/DS18B20.html), [DS18S20](https://www.maximintegrated.com/en/products/sensors/DS18S20.html), [DS1822](https://www.maximintegrated.com/en/products/sensors/DS1822.html) and [MAX31850](https://www.maximintegrated.com/en/products/sensors/MAX31850.html).
 
 # Usage:
 
