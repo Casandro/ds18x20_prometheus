@@ -1,6 +1,6 @@
 # ds18x20_prometheus
 
-A simple service for the Raspberry PI.
+A simple service for the Raspberry PI. Which exports temperature sensors exported by the Linux `w1_therm` drivers. Those include [DS18B20](https://www.maximintegrated.com/en/products/sensors/DS18B20.html), [DS18S20](https://www.maximintegrated.com/en/products/sensors/DS18S20.html), [DS1822](https://www.maximintegrated.com/en/products/sensors/DS1822.html) and [MAX31850](https://www.maximintegrated.com/en/products/sensors/MAX31850.html).
 
 # Usage:
 
@@ -12,11 +12,10 @@ To find out what sensors you have attached to your Raspberry PI, look for the fi
 
 ```
 > ls /sys/bus/w1/devices/*/temperature
-/sys/bus/w1/devices/28-6137550a6461/temperature  /sys/bus/w1/devices/28-9003550a6461/temperature  /sys/bus/w1/devices/28-a967550a6461/temperature
-/sys/bus/w1/devices/28-6c05550a6461/temperature  /sys/bus/w1/devices/28-9d0a550a6461/temperature
 ```
 
-The `28-xxxxxxxxxx` part of the path is the sensor ID. You can attach a label to it, by giving it as a parameter to the command line.
+The sensor ID is the part of the path between `devices` and `temperature`. You can label the sensors my appending pairs of `id=label` tuples to the command line.
+
 
 # Preparing your raspberry pi
 
@@ -24,6 +23,6 @@ Add the device tree overlay to your /boot/config.txt
 ```
 dtoverlay=w1-gpio,gpiopin=4,pullup=on
 ```
-replace the gpiopin=4 with the number of the gpiopin you use. I thin the pullup parameter adds an integrated pull-up.
+replace the gpiopin=4 with the number of the gpiopin you use. I think the pullup parameter adds an integrated pull-up.
 
 
